@@ -150,7 +150,7 @@ webhook5.send({
 
 
 
-    res.json("code": "given","message": "you can now close this tab");
+    res.json({"code": "given","message": "you can now close this tab"});
   } catch (err) {
     console.log(err.message);
     res.status(401).send('err');
