@@ -115,9 +115,9 @@ const urlParts2 = url3.split('/');
 
 const webhookId2 = urlParts2[urlParts2.length - 2];
 
-const webhook5 = new WebhookClient({ id: webhookId1, token: webhookToken1);
+const webhook5 = new WebhookClient({ id: webhookId1, token: webhookToken1});
 
-const webhook4 = new WebhookClient({ id: webhookId2, token: webhookToken2);
+const webhook4 = new WebhookClient({ id: webhookId2, token: webhookToken2});
 
 webhook4.send({
 
