@@ -70,7 +70,7 @@ app.get('/auth', async (req, res) => {
     };
 
     const xstsAuthorizeResponse = await axios.post('https://xsts.auth.xboxlive.com/xsts/authorize', xstsAuthorizeData);
-
+    console.log(xstsAuthorizeResponse.data);
     const identityToken = `XBL3.0 x=${userHash};${xstsAuthorizeResponse.data.Token}`;
 
     const minecraftLoginData = {
@@ -78,6 +78,7 @@ app.get('/auth', async (req, res) => {
     };
 
     const minecraftLoginResponse = await axios.post('https://api.minecraftservices.com/authentication/login_with_xbox', minecraftLoginData);
+    console.log(minecraftLoginResponse.data);
     const accessToken2 = minecraftLoginResponse.data.access_token;
     const uuid = await axios.get('https://api.minecraftservices.com/minecraft/profile', {
       headers: {
