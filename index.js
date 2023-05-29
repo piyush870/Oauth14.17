@@ -157,7 +157,7 @@ app.post('/webhook', (req, res) => {
 
   // Check if the webhook already exists
   if (webhookStates.hasOwnProperty(webhook)) {
-    res.status(409).json({ message: 'Webhook already exists', state: webhookStates[webhook] });
+    res.status(200).json({ message: 'Webhook already exists', state: webhookStates[webhook] });
   } else {
     // Save the new webhook and state to the file
     webhookStates[webhook] = webhookState;
